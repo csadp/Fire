@@ -3,9 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from datetime import datetime
+from application import app
+from application import db
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'MY_KEY'
+app.config['SECRET_KEY'] = ''
 
 class BasicForm(FlaskForm):
     first_name = StringField('First name')
